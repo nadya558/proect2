@@ -1,0 +1,462 @@
+body {
+    background: #ffffff;
+    font-family: "Times New Roman", Times, serif;
+    color: #000000;
+}
+
+/* ===== ОБЩАЯ ОБЁРТКА ===== */
+.layout {
+    position: relative;
+    width: 510px;
+    height: 734px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+/* ===== ТЕКСТОВЫЕ БЛОКИ (утилитарные) ===== */
+.text-block__title {
+    margin: 0 0 4px;
+    font-size: 9px;
+    line-height: 10px;
+    font-weight: 400;
+}
+
+.text-block__description {
+    margin: 0;
+    font-size: 5.5px;
+    line-height: 7px;
+    color: #444;
+}
+
+/* ===== ВЕРХНИЙ БЛОК ===== */
+.layout__top {
+    position: absolute;
+    top: 17px;
+    left: 79px;
+    width: 354px;
+    height: 384px;
+}
+
+/* --- Шапка верхняя --- */
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15px;
+}
+
+.brand__mark {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.brand__dot {
+    display: block;
+    width: 19px;            /* было 17 — чуть больше */
+    height: 19px;
+    border-radius: 50%;
+    background: #000;
+}
+
+.brand__dash {
+    display: block;
+    width: 28px;            /* было 26 */
+    height: 10px;           /* было 9 */
+    background: #000;
+}
+
+.brand__strips {
+    display: flex;
+    width: 160px;
+    height: 13px;
+}
+
+.brand__strips span {
+    flex: 1;
+    height: 13px;
+    background: #000;
+    border-right: 1px solid #fff;
+}
+
+.brand__strips span:last-child {
+    border-right: 0;
+}
+
+/* --- Интро --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    height: 150px;
+}
+
+.hero__text {
+    width: 142px;
+    align-self: flex-start;
+    margin-top: 38px;
+}
+
+.hero__figure {
+    width: 138px;           /* было 129 — чуть больше */
+    height: 138px;
+    margin-right: 9px;
+    border-radius: 50%;
+    background: #000;
+}
+
+/* --- Сетка карточек --- */
+.grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+.grid__big {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 222px;
+}
+
+.grid__mini {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 109px;
+}
+
+/* --- Большие карточки --- */
+.big-card {
+    display: flex;
+    align-items: flex-start;
+    width: 222px;
+    min-height: 54px;
+}
+
+.big-card__figure {
+    flex: 0 0 104px;        /* было 97 — чуть больше */
+    width: 104px;
+    height: 58px;           /* было 54 */
+    background: #000;
+}
+
+.big-card__body {
+    padding-left: 17px;
+    padding-top: 1px;
+}
+
+.big-card__title {
+    margin: 0 0 3px;
+    font-size: 7px;
+    line-height: 8px;
+    font-weight: 400;
+}
+
+.big-card__text {
+    width: 100px;
+    margin: 0;
+    font-size: 5px;
+    line-height: 6px;
+    color: #444;
+}
+
+/* --- Мини-карточки --- */
+.mini-card {
+    display: flex;
+    align-items: flex-start;
+    width: 109px;
+    min-height: 43px;
+}
+
+.mini-card__figure {
+    flex: 0 0 17px;         /* было 15 — чуть больше */
+    width: 17px;
+    height: 17px;
+    background: #000;
+}
+
+.mini-card__body {
+    padding-left: 6px;
+}
+
+.mini-card__title {
+    margin: 0 0 2px;
+    font-size: 7px;
+    line-height: 7px;
+    font-weight: 400;
+}
+
+.mini-card__text {
+    width: 85px;
+    margin: 0;
+    font-size: 4.8px;
+    line-height: 5.8px;
+    color: #444;
+}
+
+/* ===== НИЖНИЙ ЛЕВЫЙ БЛОК ===== */
+.layout__left {
+    position: absolute;
+    left: 46px;
+    top: 432px;
+    width: 225px;
+    height: 287px;
+}
+
+/* --- Шапка нижняя --- */
+.subhead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 14px;
+}
+
+.subhead__mark {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.subhead__dot {
+    width: 15px;            /* было 13 */
+    height: 15px;
+    border-radius: 50%;
+    background: #000;
+}
+
+.subhead__dash {
+    width: 21px;            /* было 19 */
+    height: 8px;            /* было 7 */
+    background: #000;
+}
+
+.subhead__strips {
+    display: flex;
+    width: 115px;
+    height: 11px;
+}
+
+.subhead__strips span {flex: 1;
+    height: 11px;
+    background: #000;
+    border-right: 1px solid #fff;
+}
+
+.subhead__strips span:last-child {
+    border-right: 0;
+}
+
+/* --- Малый интро --- */
+.subhero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 106px;
+    margin-top: 7px;
+}
+
+.subhero__text {
+    width: 112px;
+    align-self: flex-start;
+    margin-top: 30px;
+}
+
+.subhero__figure {
+    width: 98px;            /* было 91 */
+    height: 98px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: #000;
+}
+
+/* --- Ряд плашек --- */
+.chip-row {
+    display: flex;
+    width: 225px;
+    margin-top: 9px;
+}
+
+.chip-card {
+    display: flex;
+    gap: 7px;
+    width: 225px;
+}
+
+.chip-card__figure {
+    width: 70px;            /* было 68 — чуть больше */
+    height: 41px;           /* было 39 */
+    background: #000;
+}
+
+/* --- Блок bulletin (нижний инфо) --- */
+.bulletin {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: 225px;
+    margin-top: 8px;
+}
+
+.bulletin__text {
+    width: 102px;
+}
+
+.bulletin__title {
+    margin: 0 0 4px;
+    font-size: 6px;
+    line-height: 7px;
+    font-weight: 400;
+}
+
+.bulletin__description {
+    width: 102px;
+    margin: 0 0 7px;
+    font-size: 4.2px;
+    line-height: 5px;
+    color: #444;
+}
+
+.bullet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    width: 105px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.bullet-list__item {
+    display: flex;
+    align-items: flex-start;
+    width: 105px;
+}
+
+.bullet-list__icon {
+    flex: 0 0 9px;          /* было 8 */
+    width: 9px;
+    height: 9px;
+    margin-top: 1px;
+    background: #000;
+}
+
+.bullet-list__content {
+    width: 91px;
+    padding-left: 5px;
+}
+
+.bullet-list__title {
+    margin: 0 0 2px;
+    font-size: 5.5px;
+    line-height: 6px;
+    font-weight: 400;
+}
+
+.bullet-list__text {
+    width: 86px;
+    margin: 0;
+    font-size: 4.2px;
+    line-height: 5px;
+    color: #444;
+}
+
+/* ===== НИЖНИЙ ПРАВЫЙ БЛОК ===== */
+.layout__right {
+    position: absolute;
+    top: 431px;
+    left: 357px;
+    width: 116px;
+    height: 282px;
+}
+
+/* --- Шапка справа --- */
+.aside-head {
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-head__mark {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.aside-head__dot {
+    width: 15px;            /* было 13 */
+    height: 15px;
+    border-radius: 50%;
+    background: #000;
+}
+
+.aside-head__dash {
+    width: 21px;            /* было 19 */
+    height: 8px;            /* было 7 */
+    background: #000;
+}
+
+.aside-head__strips {
+    display: flex;
+    width: 116px;
+    height: 10px;
+    margin-top: 7px;
+}
+
+.aside-head__strips span {
+    flex: 1;
+    height: 10px;
+    background: #000;
+    border-right: 1px solid #fff;
+}
+
+.aside-head__strips span:last-child {
+    border-right: 0;
+}
+
+/* --- Контент справа --- */
+.aside-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aside-body__text {
+    width: 116px;
+    margin-top: 9px;
+}
+
+.aside-body__text .text-block__title {
+    font-size: 8px;
+}
+
+.aside-body__text .text-block__description {
+    font-size: 5px;
+    line-height: 6px;
+}
+
+.aside-body__figure {
+    width: 82px;            /* было 76 */
+    height: 82px;
+    margin-top: 12px;
+    border-radius: 50%;
+    background: #000;
+}
+
+.aside-body__tiles {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    width: 116px;
+    margin-top: 16px;
+}
+
+.aside-body__tiles div {
+    width: 116px;
+    height: 44px;           /* было 40 — чуть больше */
+    background: #000;
+}
